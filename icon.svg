@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d524a"/>
+      <stop offset="1" stop-color="#05201f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <path d="M32 9 L49 15 V29 C49 39 42 45 32 50 C22 45 15 39 15 29 V15 Z" fill="#4dd98c"/>
+  <rect x="25" y="27" width="14" height="11" rx="2" fill="#fff"/>
+  <path d="M28 27 V23.5 a4 4 0 0 1 8 0 V27" fill="none" stroke="#fff" stroke-width="2.6"/>
+  <text x="32" y="60" text-anchor="middle" font-family="-apple-system,Segoe UI,Arial" font-size="9" font-weight="800" fill="#fff">MSR</text>
+</svg>

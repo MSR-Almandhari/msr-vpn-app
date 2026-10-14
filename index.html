@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSR VPN · Download</title>
+  <meta name="description" content="Download MSR VPN for Mac, Windows, iPhone and Android.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <style>
+    :root {
+      --bg: #ffffff; --bg2: #f5f7f8; --text: #0e1116; --muted: #5f6772; --line: #e4e7eb;
+      --accent: #0f8a62; --accent2: #0b6e4e; --on: #ffffff; --chip: #eaf6f0; --shadow: 0 30px 60px -20px rgba(10, 40, 30, .25);
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0c0e11; --bg2: #13161a; --text: #eef0f3; --muted: #959ca7; --line: #23272d;
+              --accent: #2fc48a; --accent2: #27a776; --on: #05140d; --chip: #142a20; --shadow: 0 30px 60px -20px rgba(0, 0, 0, .7); }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--bg); color: var(--text);
+           font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* nav */
+    nav { position: sticky; top: 0; z-index: 5; backdrop-filter: saturate(180%) blur(14px);
+          background: color-mix(in srgb, var(--bg) 82%, transparent); border-bottom: 1px solid var(--line); }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; letter-spacing: -.01em; }
+    .brand img { width: 30px; height: 30px; }
+    nav .links a { text-decoration: none; color: var(--muted); font-size: 14px; margin-left: 22px; }
+    nav .links a:hover { color: var(--text); }
+
+    /* hero */
+    .hero { padding: 72px 0 40px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+    .eyebrow { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); background: var(--chip);
+               padding: 5px 11px; border-radius: 99px; margin-bottom: 18px; }
+    h1 { font-size: clamp(38px, 6vw, 60px); line-height: 1.04; letter-spacing: -.035em; margin: 0 0 16px; }
+    .lead { font-size: 19px; color: var(--muted); margin: 0 0 30px; max-width: 30ch; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; background: var(--accent); color: var(--on);
+           font-weight: 650; text-decoration: none; padding: 14px 24px; border-radius: 12px; font-size: 16px;
+           transition: background .15s, transform .15s; }
+    .btn:hover { background: var(--accent2); transform: translateY(-1px); }
+    .btn svg { width: 18px; height: 18px; }
+    .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+    .btn.ghost:hover { background: var(--bg2); }
+    .meta { font-size: 13px; color: var(--muted); margin-top: 14px; }
+
+    /* app mockup */
+    .mock { justify-self: center; width: min(340px, 100%); background: var(--bg2); border: 1px solid var(--line);
+            border-radius: 18px; box-shadow: var(--shadow); padding: 14px 24px 30px; text-align: center; }
+    .dots { display: flex; gap: 7px; margin-bottom: 26px; }
+    .dots i { width: 11px; height: 11px; border-radius: 50%; background: var(--line); }
+    .dots i:nth-child(1) { background: #ff5f57; } .dots i:nth-child(2) { background: #febc2e; } .dots i:nth-child(3) { background: #28c840; }
+    .power { width: 150px; height: 150px; margin: 0 auto 22px; border-radius: 50%;
+             background: radial-gradient(circle at 35% 30%, #7fe3a8, #34c26a 60%, #24a557);
+             box-shadow: 0 0 0 10px color-mix(in srgb, #34c26a 15%, transparent), 0 18px 40px -8px rgba(52, 194, 106, .6);
+             display: grid; place-items: center; animation: pulse 3s ease-in-out infinite; }
+    .power svg { width: 58px; height: 58px; color: #fff; }
+    @keyframes pulse { 50% { box-shadow: 0 0 0 18px color-mix(in srgb, #34c26a 8%, transparent), 0 18px 40px -8px rgba(52, 194, 106, .6); } }
+    .mock b { display: block; font-size: 21px; }
+    .mock span { color: var(--muted); font-size: 14px; }
+    .stat { margin-top: 18px; display: flex; justify-content: center; gap: 22px; font-size: 13px; color: var(--muted); }
+    .stat strong { display: block; color: var(--text); font-size: 15px; }
+
+    /* features */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px 0 72px; }
+    .feature { display: flex; gap: 12px; align-items: flex-start; }
+    .feature .ic { flex: none; width: 38px; height: 38px; border-radius: 10px; background: var(--chip); color: var(--accent); display: grid; place-items: center; }
+    .feature .ic svg { width: 20px; height: 20px; }
+    .feature strong { display: block; font-size: 15px; }
+    .feature p { margin: 2px 0 0; font-size: 14px; color: var(--muted); }
+
+    /* platforms */
+    section.band { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 72px 0; }
+    h2 { font-size: 32px; letter-spacing: -.02em; margin: 0 0 8px; text-align: center; }
+    .sub { text-align: center; color: var(--muted); margin: 0 0 36px; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .plat { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 26px 20px; text-align: center;
+            display: flex; flex-direction: column; align-items: center; gap: 6px; transition: border-color .15s, transform .15s; }
+    .plat:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); transform: translateY(-2px); }
+    .plat.current { border-color: var(--accent); box-shadow: 0 0 0 3px var(--chip); }
+    .plat svg.dev { width: 40px; height: 40px; color: var(--text); margin-bottom: 6px; }
+    .plat h3 { margin: 0; font-size: 18px; }
+    .plat .req { font-size: 13px; color: var(--muted); min-height: 2.6em; }
+    .plat .btn { width: 100%; justify-content: center; padding: 11px 16px; font-size: 15px; margin-top: 8px; }
+    .badge { font-size: 11px; font-weight: 700; letter-spacing: .04em; color: var(--muted); border: 1px solid var(--line);
+             border-radius: 99px; padding: 3px 9px; }
+    .alt { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+    /* steps */
+    .steps { padding: 72px 0; }
+    .steplist { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: s; }
+    .step { border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+    .step::before { counter-increment: s; content: counter(s); display: grid; place-items: center; width: 32px; height: 32px;
+                    border-radius: 50%; background: var(--accent); color: var(--on); font-weight: 700; margin-bottom: 14px; }
+    .step strong { display: block; font-size: 17px; margin-bottom: 4px; }
+    .step p { margin: 0; color: var(--muted); font-size: 14px; }
+    .tip { margin: 18px auto 0; text-align: center; font-size: 13px; color: var(--muted); }
+
+    footer { border-top: 1px solid var(--line); padding: 26px 0 40px; font-size: 12.5px; color: var(--muted); }
+    footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; padding-top: 44px; text-align: center; }
+      .lead { margin-left: auto; margin-right: auto; }
+      .cta { justify-content: center; }
+      .features, .steplist { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      nav .links a.hide-sm { display: none; }
+    }
+    @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } h2 { font-size: 27px; } }
+    @media (prefers-reduced-motion: reduce) { .power { animation: none; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#"><img src="icon.svg" alt="">MSR VPN</a>
+    <div class="links">
+      <a href="#download">Download</a>
+      <a class="hide-sm" href="#setup">Setup</a>
+      <a class="hide-sm" href="https://github.com/MSR-Almandhari/msr-vpn-app/releases">Releases</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Invite only</span>
+      <h1>Private internet,<br>one click away.</h1>
+      <p class="lead">Fast, encrypted, and ad-free. Your connection stays yours.</p>
+      <div class="cta">
+        <a class="btn" id="primary" href="#download">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>
+          <span id="primary-label">Download</span>
+        </a>
+        <a class="btn ghost" href="#download">All platforms</a>
+      </div>
+      <p class="meta" id="primary-meta">Mac · Windows · iPhone · Android</p>
+    </div>
+
+    <div class="mock" aria-hidden="true">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div class="power"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v8"/><path d="M6.4 6.6a8 8 0 1 0 11.2 0"/></svg></div>
+      <b>Connected</b>
+      <span>Your connection is protected</span>
+      <div class="stat"><div><strong>Encrypted</strong>Traffic</div><div><strong>WireGuard®</strong>Protocol</div></div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/></svg></div>
+      <div><strong>Encrypted</strong><p>Built on WireGuard®, the modern VPN standard.</p></div>
+    </div>
+    <div class="feature">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+      <div><strong>Ad &amp; tracker blocking</strong><p>Ads, trackers and scam sites stopped before they load.</p></div>
+    </div>
+    <div class="feature">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><path d="M3 3l18 18"/></svg></div>
+      <div><strong>No browsing logs</strong><p>The websites you visit are never recorded.</p></div>
+    </div>
+  </section>
+</main>
+
+<section class="band" id="download">
+  <div class="wrap">
+    <h2>Download MSR VPN</h2>
+    <p class="sub">Free for invited members. You'll need your personal setup from the admin.</p>
+    <div class="grid">
+      <div class="plat" data-os="mac">
+        <svg class="dev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M1 19h22"/></svg>
+        <h3>Mac</h3>
+        <div class="req">macOS 13 or later<br>Apple silicon &amp; Intel</div>
+        <a class="btn" href="https://github.com/MSR-Almandhari/msr-vpn-app/releases/latest/download/MSR-VPN-mac.zip">Download</a>
+        <div class="alt">Version 1.1 · 4.3 MB</div>
+      </div>
+      <div class="plat" data-os="windows">
+        <svg class="dev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+        <h3>Windows</h3>
+        <div class="req"><span class="badge">COMING SOON</span></div>
+        <a class="btn ghost" href="https://www.wireguard.com/install/">Use WireGuard</a>
+        <div class="alt">Windows 10 and 11</div>
+      </div>
+      <div class="plat" data-os="ios">
+        <svg class="dev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>
+        <h3>iPhone &amp; iPad</h3>
+        <div class="req">iOS 15 or later<br>via WireGuard</div>
+        <a class="btn ghost" href="https://apps.apple.com/app/wireguard/id1441195209">App Store</a>
+        <div class="alt">Scan your setup QR code</div>
+      </div>
+      <div class="plat" data-os="android">
+        <svg class="dev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M6 5h12M6 18h12"/></svg>
+        <h3>Android</h3>
+        <div class="req">Android 7 or later<br>via WireGuard</div>
+        <a class="btn ghost" href="https://play.google.com/store/apps/details?id=com.wireguard.android">Google Play</a>
+        <div class="alt">Scan your setup QR code</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps wrap" id="setup">
+  <h2>Set up in a minute</h2>
+  <p class="sub">On Mac</p>
+  <div class="steplist">
+    <div class="step"><strong>Install</strong><p>Drag MSR VPN to Applications and open it.</p></div>
+    <div class="step"><strong>Add your setup</strong><p>Paste the setup you received from the admin.</p></div>
+    <div class="step"><strong>Connect</strong><p>Click the power button. That's it.</p></div>
+  </div>
+  <p class="tip">First launch only: if macOS blocks it, open System Settings › Privacy &amp; Security › <b>Open Anyway</b>.</p>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© MSR VPN</span>
+    <span>Includes open-source software · <a href="https://github.com/MSR-Almandhari/msr-vpn-app#open-source-parts">Licenses</a> ·
+      WireGuard is a registered trademark of Jason A. Donenfeld.</span>
+  </div>
+</footer>
+
+<script>
+  // Point the main button at the visitor's own platform.
+  (function () {
+    var ua = navigator.userAgent, os = "mac";
+    if (/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) os = "ios";
+    else if (/Android/.test(ua)) os = "android";
+    else if (/Windows/.test(ua)) os = "windows";
+    var card = document.querySelector('.plat[data-os="' + os + '"]');
+    if (!card) return;
+    card.classList.add("current");
+    var link = card.querySelector("a.btn");
+    var names = { mac: "Download for Mac", windows: "Get it for Windows", ios: "Get it on the App Store", android: "Get it on Google Play" };
+    var metas = { mac: "Version 1.1 · macOS 13+ · Apple silicon & Intel", windows: "MSR VPN for Windows is coming soon · WireGuard for now",
+                  ios: "Uses the free WireGuard app", android: "Uses the free WireGuard app" };
+    document.getElementById("primary").href = link.href;
+    document.getElementById("primary-label").textContent = names[os];
+    document.getElementById("primary-meta").textContent = metas[os];
+  })();
+</script>
+</body>
+</html>
