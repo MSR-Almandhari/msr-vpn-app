@@ -185,9 +185,9 @@
       <div class="plat" data-os="windows">
         <svg class="dev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
         <h3>Windows</h3>
-        <div class="req"><span class="badge">COMING SOON</span></div>
-        <a class="btn ghost" href="https://www.wireguard.com/install/">Use WireGuard</a>
-        <div class="alt">Windows 10 and 11</div>
+        <div class="req">Windows 10 or 11<br>64-bit (Intel &amp; AMD)</div>
+        <a class="btn" href="https://github.com/MSR-Almandhari/msr-vpn-app/releases/latest/download/MSR-VPN-windows.zip">Download</a>
+        <div class="alt">Version 1.2 · 63 MB</div>
       </div>
       <div class="plat" data-os="ios">
         <svg class="dev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18.5h2"/></svg>
@@ -237,8 +237,8 @@
     if (!card) return;
     card.classList.add("current");
     var link = card.querySelector("a.btn");
-    var names = { mac: "Download for Mac", windows: "Get it for Windows", ios: "Get it on the App Store", android: "Get it on Google Play" };
-    var metas = { mac: "Version 1.1 · macOS 13+ · Apple silicon & Intel", windows: "MSR VPN for Windows is coming soon · WireGuard for now",
+    var names = { mac: "Download for Mac", windows: "Download for Windows", ios: "Get it on the App Store", android: "Get it on Google Play" };
+    var metas = { mac: "Version 1.2 · macOS 13+ · Apple silicon & Intel", windows: "Version 1.2 · Windows 10 & 11 · 64-bit",
                   ios: "Uses the free WireGuard app", android: "Uses the free WireGuard app" };
     document.getElementById("primary").href = link.href;
     document.getElementById("primary-label").textContent = names[os];
