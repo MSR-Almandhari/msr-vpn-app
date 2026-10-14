@@ -3,7 +3,7 @@
 A private VPN for invited people. **Download page: https://msr-almandhari.github.io/msr-vpn-app/**
 
 - **Mac:** [MSR VPN for Mac](https://github.com/MSR-Almandhari/msr-vpn-app/releases/latest/download/MSR-VPN-mac.zip) (macOS 13+, Apple Silicon and Intel)
-- **Windows:** [MSR VPN for Windows](https://github.com/MSR-Almandhari/msr-vpn-app/releases/latest/download/MSR-VPN-windows.zip) (Windows 10 and 11, 64-bit)
+- **Windows:** [MSR VPN for Windows](https://github.com/MSR-Almandhari/msr-vpn-app/releases/latest/download/MSR-VPN-Setup.exe) (installer; Windows 10 and 11, 64-bit). Prefer no installer? [Zip](https://github.com/MSR-Almandhari/msr-vpn-app/releases/latest/download/MSR-VPN-windows.zip)
 - **iPhone, Android:** the official [WireGuard](https://www.wireguard.com/install/) app for now
 
 You need a personal setup from the admin. Each setup works on one device only.
